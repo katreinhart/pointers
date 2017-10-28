@@ -8,8 +8,33 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+//int Add(int *a, int *b) {
+//    return *a + *b;
+//}
+
+//void Add(int *a, int *b, int *result) {
+//    *result = *a + *b;
+//}
+
+void Swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    using namespace std;
+    
+    int a = 10, b = 5;
+//    int result = 0;
+    
+    int *x = &a, *y = &b;
+    cout << "*x: " << *x << ", *y: "<< *y << endl;
+    Swap(x, y);
+    cout << "*x: " << *x << ", *y: "<< *y << endl;
+    
+    
     return 0;
 }
+
+
